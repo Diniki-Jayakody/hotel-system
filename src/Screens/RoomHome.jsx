@@ -29,6 +29,15 @@ function RoomHome()
                                 <th className={RoomHomeStyles.tableHeader}>Price</th>
                                 <th className={RoomHomeStyles.tableHeader}>Image</th>
                             </tr>
+                            
+                            <tr className={RoomHomeStyles.tableRow}>
+                                <td className={RoomHomeStyles.tableHeader}>R001</td>
+                                <td className={RoomHomeStyles.tableHeader}>abcd</td>
+                                <td className={RoomHomeStyles.tableHeader}>2</td>
+                                <td className={RoomHomeStyles.tableHeader}>23000</td>
+                                <td className={RoomHomeStyles.tableHeader}>Image</td>
+                            </tr>
+                            
 
                         </table>
                         </center>
