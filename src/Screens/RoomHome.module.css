@@ -15,7 +15,22 @@
     background-color: rgb(229, 238, 247);
 }
 
-p{
-    font-weight: 650;
-    font-size: 1.3vw;
-}
+input[type=text]:focus {
+    background-color: rgb(255, 255, 255);
+    width: 30vw;
+    height: 5vh;
+  /* padding: 12px 20px; */
+  /* margin: 8px 0; */
+ 
+  }
+  input{
+    width: 20vw;
+    height: 5vh
+    
+  }
+
+  button {
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
