@@ -19,6 +19,8 @@ function ViewRoom()
                     <p> Check out Date</p>
                     <div><h4>Superior Twin</h4></div>
                 </div>
+                <div><button>Update</button> 
+                <button>Delete</button></div>
                 
             </div>
         </>
