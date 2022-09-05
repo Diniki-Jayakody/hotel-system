@@ -11,12 +11,13 @@ import NavBarStyles from './NavBar.module.css';
 
 function NavBar()
 {
+    const path= '/room_home';
     return(
         <>
             <div className={NavBarStyles.box}>
                 <table>
                 <tr><td><button className={NavBarStyles.navBtn}><img src={food} width="30" height="30"/>Foods</button></td></tr>
-                <tr><Link to="/room_home"><button className={NavBarStyles.navBtn}>Rooms</button></Link></tr> 
+                <tr><Link to={path}><button className={NavBarStyles.navBtn}>Rooms</button></Link></tr> 
                     <tr><td><button className={NavBarStyles.navBtn}><img src={addRooom} width="30" height="30"/> Bookings      </button></td></tr>
                     <tr><td><button className={NavBarStyles.navBtn}><img src={employee} width="30" height="30"/>Employees</button></td></tr>
                     <tr><td><button className={NavBarStyles.navBtn}><img src={payment} width="30" height="30"/>Payments</button></td></tr>
