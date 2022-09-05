@@ -20,16 +20,12 @@
     border-radius: 1vw;
 
 }
-tr {
+.tRow {
     height: 5vw;
-    width: 150vw;
+    width: 15vw;
     vertical-align: bottom;
   }
 
-  td {
-    width:150px;
-    text-align:center;
-    border:1px solid black;
-    padding:5px
- 
-}
+
+
+

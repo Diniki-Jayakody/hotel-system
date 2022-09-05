@@ -1,36 +1,68 @@
-.tableHeader{
+.tableHeader, .tableData{
     padding:1vw 3vw 1vw 3vw;
-
+    background-color: rgb(202, 202, 202);
+    border:none;
+    
   
 }
-.tableRow{
-    background-color: rgb(223, 219, 213);
-    margin: 1vw;
-}
 
-.form{
+
+
+
+/* .form{
     height: 50vw;
     width:60vw;
     border-radius: 1vw;
     background-color: rgb(229, 238, 247);
-}
+} */
 
-input[type=text]:focus {
+/* input[type=text]:focus {
     background-color: rgb(255, 255, 255);
     width: 30vw;
     height: 5vh;
-  /* padding: 12px 20px; */
-  /* margin: 8px 0; */
+
  
-  }
-  input{
-    width: 20vw;
-    height: 5vh
-    
+  } */
+ 
+.btnBox{
+  padding-top: 2vw;
+}
+
+.bttons:hover{
+  background-color: rgb(70, 119, 88);
+  color: rgb(255, 255, 255);
+
+
+}
+
+.Reportbttons:hover{
+  background-color: rgb(70, 119, 88);
+  color: rgb(255, 255, 255);
+
+
+}
+  .butn-box{
+    padding-top: 20%;
   }
 
-  button {
-    cursor: pointer;
-    transition: 0.5s;
+  .table{
+    border-collapse: '50px';
   }
 
+  .bttons{
+    background-color: #052E03;
+    color: aliceblue;
+    height: 2.5vw;
+    width: 11vw;
+    border-radius: 2vw;
+    border: 0ch;
+  }
+
+  .Reportbttons{
+    background-color: #052E03;
+    color: aliceblue;
+    height: 2.5vw;
+    width: 11vw;
+    border-radius: 2vw;
+    border: 0ch;
+  }

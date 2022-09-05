@@ -6,7 +6,7 @@ import HomePage from "./Screens/HomePage";
 import RoomHome from "./Screens/RoomHome";
 import RoomBookingHome from "./Screens/RoomBookingHome";
 import AddRoom from "./Screens/AddRoom";
-import ViewRoom from "./Screens/AddRoom";
+import ViewRoom from "./Screens/ViewRoom";
 import ViewBookedRoom from "./Screens/ViewBookedRoom";
 
 
