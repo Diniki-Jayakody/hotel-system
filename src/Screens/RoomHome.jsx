@@ -1,23 +1,9 @@
 import React from "react";
 
 import { Link} from "react-router-dom";
-import { message, Popconfirm, Button } from 'antd';
-import {DeleteOutlined,QuestionCircleOutlined} from '@ant-design/icons';
 
 import RoomHomeStyles from './RoomHome.module.css';
 import NavBar from '../Common_Components/NavBar';
-
-
-const confirm = (e) => {
-    console.log(e);
-    message.success('Click on Yes');
-    
-  };
-  
-  const cancel = (e) => {
-    console.log(e);
-    message.error('Click on No');
-  };
 
 
 function RoomHome()
