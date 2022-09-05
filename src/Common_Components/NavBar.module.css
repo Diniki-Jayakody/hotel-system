@@ -3,6 +3,7 @@
     width: 22%;
     background-color: #052E03;
     position: absolute;
+    
 }
 
 .navBtn{
@@ -14,7 +15,8 @@
 }
 
 .navBtn:hover{
-    background-color: rgb(250, 239, 239);
-    color: black;
-}
+    background-color: rgb(70, 119, 88);
+    color: rgb(255, 255, 255);
+    border-radius: 1vw;
 
+}
