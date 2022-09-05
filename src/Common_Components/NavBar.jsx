@@ -17,7 +17,7 @@ function NavBar()
             <div className={NavBarStyles.box}>
                 <table>
                 <tr><td><button className={NavBarStyles.navBtn}><img src={food} width="30" height="30"/>Foods</button></td></tr>
-                <tr><Link to={path}><button className={NavBarStyles.navBtn}>Rooms</button></Link></tr> 
+                <tr><td><Link to={path}><button className={NavBarStyles.navBtn}><img src={addRooom} width="30" height="30"/>Rooms</button></Link></td></tr> 
                     <tr><td><button className={NavBarStyles.navBtn}><img src={addRooom} width="30" height="30"/> Bookings      </button></td></tr>
                     <tr><td><button className={NavBarStyles.navBtn}><img src={employee} width="30" height="30"/>Employees</button></td></tr>
                     <tr><td><button className={NavBarStyles.navBtn}><img src={payment} width="30" height="30"/>Payments</button></td></tr>
