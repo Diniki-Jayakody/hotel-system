@@ -1,0 +1,37 @@
+.tableHeader{
+    padding:1vw 3vw 1vw 3vw;
+
+  
+}
+.tableRow{
+    background-color: rgb(223, 219, 213);
+    margin: 1vw;
+}
+
+.form{
+
+    border-radius: 1vw;
+    padding-left: 3vw;
+    padding-bottom: 2vw;
+    background-color: rgb(229, 238, 247);
+}
+
+input[type=text]:focus {
+    background-color: rgb(255, 255, 255);
+    width: 30vw;
+    height: 5vh;
+  /* padding: 12px 20px; */
+  /* margin: 8px 0; */
+ 
+  }
+  input{
+    width: 20vw;
+    height: 5vh
+    
+  }
+
+  button {
+    cursor: pointer;
+    transition: 0.5s;
+  }
+

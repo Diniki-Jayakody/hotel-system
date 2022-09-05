@@ -1,10 +1,16 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 import arrow from '../Resources/arrow.jpg'
-import RoomHomeStyles from './RoomHome.module.css';
+import RoomHomeStyles from './AddRoom.module.css';
 import NavBar from '../Common_Components/NavBar'
 
-
+function validateForm() {
+    let x = document.forms["addForm"]["type"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+  }
 function AddRoom()
 {
     
@@ -19,7 +25,7 @@ function AddRoom()
                     <div> <Link to='/room_home'><button style={{paddingLeft: '0vw', border: 0, backgroundColor: "white", padding: 'vw'}}><img src={arrow} width="20vw" height="20vw"/> Back</button ></Link></div>
      
                     <div style={{height:'0.25vw'}}></div>
-                    <form name="addRoom" action="/post form" method="post" onsubmit="return validateForm()">
+                    <form name="addForm" action="/post form" method="post" onsubmit="return validateForm()">
                     <div  className={RoomHomeStyles.form}>
                         <h2 style={{textAlign:'center'}}>Add Rooms</h2>
                         <p className={RoomHomeStyles.labels}>Room Type</p>
