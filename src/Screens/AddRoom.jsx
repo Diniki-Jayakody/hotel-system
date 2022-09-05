@@ -4,17 +4,14 @@ import arrow from '../Resources/arrow.jpg'
 import RoomHomeStyles from './RoomHome.module.css';
 import NavBar from '../Common_Components/NavBar'
 
-function validateForm() {
-    let x = document.forms["addRoom"]["type"].value;
-    if (x == "") {
-      alert("Name must be filled out");
-      return false;
-    }
-  }
+
 function AddRoom()
 {
+    
     return(
+        
         <>
+        
          <div>
             <NavBar/>
             <div style={{height:'auto', width:'65vw', marginLeft:'30vw'}}>
