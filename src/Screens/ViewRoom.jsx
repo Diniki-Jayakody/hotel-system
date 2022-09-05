@@ -1,12 +1,14 @@
 import React from "react";
 
+import { Link} from "react-router-dom";
+
 function ViewRoom()
 {
     return(
         <>
             <div>
                 <div>
-                    <button>back</button>
+                   <Link to='/room_home'><button>back</button></Link> 
                 </div>
                 <div>
                     <h3>View Booked Rooms</h3>
