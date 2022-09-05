@@ -1,12 +1,14 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 import RoomHomeStyles from './RoomHome.module.css';
 import NavBar from '../Common_Components/NavBar';
 
 function RoomHome()
 {
+    const path='/add_room';
+    
     return(
         <>
             <div>
@@ -15,7 +17,7 @@ function RoomHome()
                     <div>
                         <button style={{float:'right'}}>Generate Report</button>
                         <div style={{height:'8vw'}}></div>
-                        <Link to='/add_room'><button>Add New Rooms</button></Link>
+                        <Link to={path}><button>Add New Rooms</button></Link>
                         <button style={{float:'right'}}>Search </button>
                     </div>
                     <div style={{height:'4vw'}}></div>
