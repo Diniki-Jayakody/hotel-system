@@ -9,11 +9,8 @@
 }
 
 .form{
-    /* height: 50vw;
-    width:60vw; */
-    padding-bottom: 0.25vw;
-    padding-right: 5vw;
-    padding-left: 5vw;
+    height: 50vw;
+    width:60vw;
     border-radius: 1vw;
     background-color: rgb(229, 238, 247);
 }
