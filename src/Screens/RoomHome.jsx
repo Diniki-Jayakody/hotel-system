@@ -47,8 +47,7 @@ function RoomHome()
                                 <th className={RoomHomeStyles.tableHeader}>Price</th>
                                 <th className={RoomHomeStyles.tableHeader}>Image</th>
                                 <th className={RoomHomeStyles.tableHeader}></th>
-                                <th className={RoomHomeStyles.tableHeader}></th>
-                                <th className={RoomHomeStyles.tableHeader}></th>
+                               
                             </tr>
                             
                             <tr className={RoomHomeStyles.tableRow}>
@@ -58,22 +57,8 @@ function RoomHome()
                                 <td className={RoomHomeStyles.tableHeader}>23000</td>
                                 <td className={RoomHomeStyles.tableHeader}>Image</td>
                                 <Link to='/view_room'> <td className={RoomHomeStyles.tableHeader}>{">>"}</td></Link>  
-                                <td className={RoomHomeStyles.tableHeader}>
-                                <Link to='/edit_room'> <button>Edit</button></Link>
-                                </td>
-                                <Popconfirm title="Are you sure want to Delete this category?"
-              // onConfirm={()=>{endCategory({Text})}}
-              onCancel={null}
-              okText="Yes"
-              cancelText="No"
-              icon={<QuestionCircleOutlined/>}>
-         <Button 
-          icon={<DeleteOutlined style={{float:'right',color:'black'}}/>}
-          style={{float:'right',  backgroundColor:'#ff7875'}}
-          // onClick={endCategory()}
-          > 
-          </Button>
-            </Popconfirm>
+                               
+                    
                             </tr>
                             
 
