@@ -1,8 +1,7 @@
 import React from "react";
 
 import HeaderStyles from './Header.module.css';
-
-import {Row, Col, Space} from 'antd';
+import {Link} from 'react-router-dom';
 
 function Header()
 {
@@ -12,7 +11,7 @@ function Header()
             <table>
                 <tr>
                 
-                <td><button className={HeaderStyles.headerBtn}>Logo</button></td>
+                <td><Link to='/room_home'><button className={HeaderStyles.headerBtn}>Logo</button></Link> </td>
                 <td style={{padding:'5vw 0vw 0vw 40vw'}}></td>
                 <td><button className={HeaderStyles.headerBtn}>Home</button></td>
                 <td><button className={HeaderStyles.headerBtn}>ContactUs</button></td>
