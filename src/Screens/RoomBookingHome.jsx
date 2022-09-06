@@ -2,6 +2,7 @@ import React from "react";
 
 import { Link} from "react-router-dom";
 
+import {ArrowRightOutlined } from '@ant-design/icons';
 import RoomHomeStyles from './RoomHome.module.css';
 import NavBar from '../Common_Components/NavBar';
 import { useState } from "react";
@@ -84,7 +85,6 @@ function RoomBookingHome()
                                 <th className={RoomHomeStyles.tableHeader}>Check in Date</th>
                                 <th className={RoomHomeStyles.tableHeader}>Check out Date</th>
                                 <th className={RoomHomeStyles.tableHeader}>No. of People</th>
-                                <th className={RoomHomeStyles.tableHeader}></th>
                 
                                
                             </tr>
@@ -94,7 +94,10 @@ function RoomBookingHome()
                                 <td className={RoomHomeStyles.tableHeader}>date</td>
                                 <td className={RoomHomeStyles.tableHeader}>date</td>
                                 <td className={RoomHomeStyles.tableHeader}>2</td>
-                                <Link to='/view_booked_room'> <td className={RoomHomeStyles.tableHeader}>{">>"}</td></Link>  
+                                <Link to='/view_booked_room'> 
+                                <td>
+                                    <ArrowRightOutlined style={{fontSize:'2vw', padding:'0.5vw 0vw 0vw 1vw', color:'black'}}/>
+                                </td></Link>  
                                
                     
                             </tr>

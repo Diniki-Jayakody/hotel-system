@@ -2,6 +2,7 @@ import React from "react";
 
 import { Link} from "react-router-dom";
 
+import {ArrowRightOutlined } from '@ant-design/icons';
 import RoomHomeStyles from './RoomHome.module.css';
 import NavBar from '../Common_Components/NavBar';
 import SubFooter from '../Common_Components/SubFooter';
@@ -148,7 +149,9 @@ function RoomHome()
                                 <td className={RoomHomeStyles.tableData}>{room.room_type}</td>
                                 <td className={RoomHomeStyles.tableData}>{room.sleeps}</td>
                                 <td className={RoomHomeStyles.tableData}>{room.current_price}</td>
-                                <td style={{padding:'1vw 2vw 0vw 1vw', border:'none'}} onClick={()=>selectRoom(room)}>{">>"}</td>  
+                                <td onClick={()=>selectRoom(room)}>
+                                <ArrowRightOutlined style={{fontSize:'2vw', padding:'0.5vw 0vw 0vw 1vw', color:'black'}}/>
+                                    </td>  
                                
                     
                             </tr>
