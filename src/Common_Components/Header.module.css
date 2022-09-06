@@ -9,7 +9,7 @@
     background-color: transparent;
     height: 4vw;
     width: 9vw;
-    font-size: 1.5vw;
+    font-size: 1.1vw;
     border-radius: 1vw;
     color:white;
     border: none;
@@ -17,5 +17,6 @@
 
 .headerBtn:hover{
     background-color: rgb(250, 239, 239);
+    opacity: 0.4;
     color: black;
 }
