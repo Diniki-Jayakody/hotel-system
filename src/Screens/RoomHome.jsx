@@ -4,12 +4,57 @@ import { Link} from "react-router-dom";
 
 import RoomHomeStyles from './RoomHome.module.css';
 import NavBar from '../Common_Components/NavBar';
+import { useState } from "react";
+import hotelApi from "../api/sliitApi";
 
 
 function RoomHome()
 {
     const addroom='/add_room';
     const viewroom='/view_room';
+
+    const[rooms , setRooms] = useState([])
+    const[room , setRoom] = useState({})
+    const[logicRoom , setLogicRoom] = useState(false)
+
+    function deleteRoom(roomNo){
+        hotelApi.delete("/room/delete/"+roomNo,{
+
+        })
+        .then((res) => { 
+            console.log("result - ",res.data)
+            if(res.data=="deleted"){
+                alert("deleted")
+                window.location.reload()
+            }
+        })
+  
+      // Catch errors if any
+      .catch((err) => { 
+        console.log(err)
+      });
+    }
+
+    function selectRoom(room){
+        setRoom(room)
+        setLogicRoom(true)
+    }
+
+    useEffect(()=>{
+        hotelApi.get("/room/getAll",{
+
+        })
+        .then((res) => { 
+            console.log("result - ",res.data)
+            setRooms(res.data)
+        })
+  
+      // Catch errors if any
+      .catch((err) => { 
+        console.log(err)
+      });
+          
+        },[])
     
     return(
         <>
