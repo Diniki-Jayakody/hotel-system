@@ -7,6 +7,14 @@
     background-color: rgb(223, 219, 213);
     margin: 1vw;
 }
+.bookingForm{
+  height: 36vw;
+  width: 50vw;
+  margin-top: 4vw;
+  background-color: #F1F1F1;
+  border-radius: 1vw;
+}
+
 
 .form{
 
