@@ -2,8 +2,7 @@
     padding:1vw 3vw 1vw 3vw;
     background-color: rgb(202, 202, 202);
     border:none;
-    
-  
+    font-size: 1.2vw;
 }
 
 
@@ -38,6 +37,7 @@
     width: 11vw;
     border-radius: 2vw;
     border: 0ch;
+    font-size: 1vw;
   }
 
   .Reportbttons{

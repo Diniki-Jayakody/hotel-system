@@ -124,7 +124,7 @@ function RoomHome()
                 <NavBar/>
                 <div className={RoomHomeStyles.btnBox} style={{height:'auto', width:'65vw', marginLeft:'26vw', margintop: '200vw'}}>
                     <div className="butn-box">
-                        <button className={RoomHomeStyles.Reportbttons}style={{float:'right'}}>Generate Report</button>
+                        <button className={RoomHomeStyles.bttons}style={{float:'right'}}>Generate Report</button>
                         <div style={{height:'5vw'}}></div>
                         <Link to={addroom}><button className={RoomHomeStyles.bttons}>Add New Rooms</button></Link>
                         <button style={{float:'right'}} className={RoomHomeStyles.bttons}>Search </button>
