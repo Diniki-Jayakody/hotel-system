@@ -58,3 +58,18 @@
     border-radius: 2vw;
     border: 0ch;
   }
+
+  .bookingHmSearch{
+    background-color: #052E03;
+    color: aliceblue;
+    height: 2.5vw;
+    width: 11vw;
+    border-radius: 2vw;
+    border: 0ch;
+  }
+
+  .bookingHmSearch:hover{
+    background-color: rgb(70, 119, 88);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }

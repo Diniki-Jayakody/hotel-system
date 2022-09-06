@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link} from "react-router-dom";
-
+import {SearchOutlined } from '@ant-design/icons';
 import {ArrowRightOutlined } from '@ant-design/icons';
 import RoomHomeStyles from './RoomHome.module.css';
 import NavBar from '../Common_Components/NavBar';
@@ -69,11 +69,11 @@ function RoomBookingHome()
                 <NavBar/>
                 <div style={{height:'auto', width:'65vw', marginLeft:'26vw'}}>
                     <div>
-                        <button style={{float:'right'}}>Generate Report</button>
+                        <button className={RoomHomeStyles.bookingHmSearch} style={{float:'right'}}>Generate Report</button>
                         <div style={{height:'8vw'}}></div>
                         <input placeholder="Room No"  value={roomNo}
                         onChange={(e)=>setroomNo(e.target.value)}></input>
-                        <button style={{float:'right'}} onClick={getBookingByRoom}>Search </button>
+                        <button className={RoomHomeStyles.bookingHmSearch}style={{float:'right'}} onClick={getBookingByRoom}><SearchOutlined/>Search </button>
                     </div>
                     <div style={{height:'4vw'}}></div>
                     <div>
