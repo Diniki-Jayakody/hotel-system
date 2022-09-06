@@ -35,54 +35,7 @@ input[type=text]:focus {
     background-color: rgb(255, 255, 255);
     width: 30vw;
     height: 2vw;
-  /* padding: 12px 20px; */
-  /* margin: 8px 0; *
- 
-  }
-  input{
-    width: 20vw;
-    height: 3vh
-  }
-
-
-
-  .submitBtn:hover{
-    background-color: rgb(70, 119, 88);
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-  }
-  
-  .back{
-    cursor: pointer;
-    background: #000;
-  }
-
-  .AddRoomBtn{
-    background-color: #052E03;
-    color: aliceblue;
-    height: 2.5vw;
-    width: 11vw;
-    border-radius: 2vw;
-    border: 0ch;
-    padding-right: 2vw;
-  }
-
-  .AddRoomBtn:hover{
-    background-color: rgb(70, 119, 88);
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-  }
-
-  .addNewRoomBtn{
-    background-color: #052E03;
-    color: aliceblue;
-    height: 2.5vw;
-    width: 11vw;
-    border-radius: 2vw;
-    border: 0ch;
-    float: right;
-    /* padding-bottom: 2vw; */
-  }
+}
 
   .addNewRoomBtn:hover{
     background-color: rgb(70, 119, 88);
@@ -99,3 +52,4 @@ input[type=text]:focus {
     border: 0ch;
     margin-top: 2vw;
   }
+
