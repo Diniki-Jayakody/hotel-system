@@ -58,7 +58,7 @@ function AddBooking()
             <div style={{height:'auto', width:'65vw', marginLeft:'10vw'}}>
         
                     <div> <Link to='/room_home'>
-                    <Button style={{border:'none', backgroundColor:'transparent', fontWeight:'600', fontSize:'1.4vw'}} icon={<ArrowLeftOutlined style={{fontSize:'1.6vw'}}/>} >
+                    <Button style={{border:'none', backgroundColor:'transparent', fontWeight:'580', fontSize:'1.3vw'}} icon={<ArrowLeftOutlined style={{fontSize:'1.6vw'}}/>} >
                         Back</Button>
                         </Link></div>
      
