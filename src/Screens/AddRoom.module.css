@@ -14,6 +14,7 @@
     padding-left: 4vw;
     padding-bottom: 4vw;
     background-color: rgb(236, 236, 236);
+    background-color: #F1F1F1;
     max-width: 40vw;
 }
 
@@ -22,7 +23,7 @@ input[type=text]:focus {
     width: 30vw;
     height: 4vh;
   /* padding: 12px 20px; */
-  /* margin: 8px 0; */
+  /* margin: 8px 0; *
  
   }
   input{
