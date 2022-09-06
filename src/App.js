@@ -8,6 +8,7 @@ import RoomBookingHome from "./Screens/RoomBookingHome";
 import AddRoom from "./Screens/AddRoom";
 import ViewRoom from "./Screens/ViewRoom";
 import ViewBookedRoom from "./Screens/ViewBookedRoom";
+import AddBooking from "./Screens/AddBooking";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path='/add_room' element={ <AddRoom/>}/>
           <Route path='/view_room' element={ <ViewRoom/>}/>
           <Route path='/view_booked_room' element={ <ViewBookedRoom/>}/>
+          <Route path='/add_booking' element={ <AddBooking/>}/>
         </Routes>
       </Router>   
     </div>
