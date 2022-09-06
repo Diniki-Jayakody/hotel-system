@@ -2,6 +2,8 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 import arrow from '../Resources/arrow.jpg'
+import { Button } from "antd";
+import {ArrowLeftOutlined  } from '@ant-design/icons';
 import RoomHomeStyles from './AddRoom.module.css';
 import NavBar from '../Common_Components/NavBar'
 import { useState } from "react";
@@ -54,7 +56,10 @@ function AddBooking()
             <NavBar/>
             <div style={{height:'auto', width:'65vw', marginLeft:'30vw'}}>
         
-                    <div> <Link to='/room_home'><button style={{paddingLeft: '0vw', border: 0, backgroundColor: "white", padding: 'vw'}}><img src={arrow} width="20vw" height="20vw"/> Back</button ></Link></div>
+                    <div> <Link to='/room_home'>
+                    <Button type="primary" icon={<ArrowLeftOutlined style={{fontSize:'2vw'}}/>} >
+                        Back</Button>
+                        </Link></div>
      
                     <div style={{height:'0.25vw'}}></div>
                     
@@ -69,7 +74,7 @@ function AddBooking()
                         <input name='type'type='text' className={RoomHomeStyles.inputs}
                         value={roomType}
                         onChange={(e)=>setRoomType(e.target.value)}/> <br/>
-                        
+
                         <p className={RoomHomeStyles.labels}>Check out Date</p>
                         <input type='text' className={RoomHomeStyles.inputs}
                         value={sleeps}
