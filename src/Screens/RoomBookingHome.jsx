@@ -4,11 +4,62 @@ import { Link} from "react-router-dom";
 
 import RoomHomeStyles from './RoomHome.module.css';
 import NavBar from '../Common_Components/NavBar';
+import { useState } from "react";
 
 
 function RoomBookingHome()
 {
     const path='/add_room';
+
+    const[check_out_date , setCheck_out_date] = useState("")
+    const[check_in_date , setCheck_in_date] = useState("")
+    const[noOf_people , setNoOf_people] = useState(0)
+    const[customerId , setCustomerId] = useState("")
+    const[bookings , setBookings] = useState([])
+    const[roomNo , setroomNo] = useState(0)
+
+    function addBooking(){
+        hotelApi.post("/booking/add",{
+            roomNo,
+            customerId,
+            noOf_people,
+            check_in_date,
+            check_out_date
+        })
+        .then((res) => { 
+            console.log("result - ",res.data)
+          //  alert(res.data)
+            if(res.data=="added"){
+                alert("Added Successfully")
+                window.location.reload()
+            }
+        })
+      
+      // Catch errors if any
+      .catch((err) => { 
+        console.log(err)
+      });
+    }
+
+    function getBookingByRoom(){
+        if(roomNo!=0){
+            hotelApi.delete("/booking/getByRoomNo/"+roomNo,{
+
+            })
+            .then((res) => { 
+                console.log("result - ",res.data)
+                 setBookings(res.data)
+            })
+      
+          // Catch errors if any
+          .catch((err) => { 
+            console.log(err)
+          });
+        }
+        else{
+            alert("please Enter room no")
+        }
+    }
     
     return(
         <>
@@ -18,8 +69,9 @@ function RoomBookingHome()
                     <div>
                         <button style={{float:'right'}}>Generate Report</button>
                         <div style={{height:'8vw'}}></div>
-                
-                        <button style={{float:'right'}}>Search </button>
+                        <input placeholder="Room No"  value={roomNo}
+                        onChange={(e)=>setroomNo(e.target.value)}></input>
+                        <button style={{float:'right'}} onClick={getBookingByRoom}>Search </button>
                     </div>
                     <div style={{height:'4vw'}}></div>
                     <div>
