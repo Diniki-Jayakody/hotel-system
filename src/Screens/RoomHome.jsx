@@ -4,7 +4,7 @@ import { Link} from "react-router-dom";
 
 import RoomHomeStyles from './RoomHome.module.css';
 import NavBar from '../Common_Components/NavBar';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import hotelApi from "../api/sliitApi";
 
 
