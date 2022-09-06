@@ -4,6 +4,7 @@ import { Link} from "react-router-dom";
 
 import RoomHomeStyles from './RoomHome.module.css';
 import NavBar from '../Common_Components/NavBar';
+import SubFooter from '../Common_Components/subFooter';
 import { useState, useEffect } from "react";
 import hotelApi from "../api/sliitApi";
 
@@ -106,6 +107,7 @@ function RoomHome()
                         </center>
                     </div>
                 </div>
+                <div ><SubFooter/></div>
             </div>
         </>
     );
