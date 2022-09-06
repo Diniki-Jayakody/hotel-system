@@ -8,6 +8,7 @@ import NavBar from '../Common_Components/NavBar';
 import SubFooter from '../Common_Components/SubFooter';
 import { useState } from "react";
 import hotelApi from "../api/sliitApi";
+import { useEffect } from "react";
 
 
 function RoomBookingHome()
@@ -19,7 +20,8 @@ function RoomBookingHome()
     const[noOf_people , setNoOf_people] = useState(0)
     const[customerId , setCustomerId] = useState("")
     const[bookings , setBookings] = useState([])
-    const[roomNo , setroomNo] = useState(0)
+    const[roomNo , setroomNo] = useState(1)
+    const[booking , setBooking] = useState({})
 
     function addBooking(){
         hotelApi.post("/booking/add",{
@@ -44,9 +46,10 @@ function RoomBookingHome()
       });
     }
 
+
     function getBookingByRoom(){
         if(roomNo!=0){
-            hotelApi.delete("/booking/getByRoomNo/"+roomNo,{
+            hotelApi.get("/booking/getByRoomNo/"+roomNo,{
 
             })
             .then((res) => { 
@@ -62,8 +65,26 @@ function RoomBookingHome()
         else{
             alert("please Enter room no")
         }
+
+    
     }
     
+    useEffect(()=>{
+            
+        hotelApi.get("/booking/getByRoomNo/"+roomNo,{
+
+        })
+        .then((res) => { 
+            console.log("result - ",res.data)
+             setBookings(res.data)
+        })
+  
+      // Catch errors if any
+      .catch((err) => { 
+        console.log(err)
+      });
+      
+    },[])
     return(
         <>
             <div>
@@ -77,7 +98,7 @@ function RoomBookingHome()
                         <button className={RoomHomeStyles.bookingHmSearch}style={{float:'right'}} onClick={getBookingByRoom}><SearchOutlined/>Search </button>
                     </div>
                     <div style={{height:'4vw'}}></div>
-                    <div>
+                   {bookings.length!=0? <div>
                         <center>
                         <table>
                            
@@ -86,27 +107,31 @@ function RoomBookingHome()
                                 <th className={RoomHomeStyles.tableHeader}>Check in Date</th>
                                 <th className={RoomHomeStyles.tableHeader}>Check out Date</th>
                                 <th className={RoomHomeStyles.tableHeader}>No. of People</th>
+                                <th className={RoomHomeStyles.tableHeader}>Customer No</th>
                 
                                
                             </tr>
                             
-                            <tr className={RoomHomeStyles.tableRow}>
-                                <td className={RoomHomeStyles.tableHeader}>R001</td>
-                                <td className={RoomHomeStyles.tableHeader}>date</td>
-                                <td className={RoomHomeStyles.tableHeader}>date</td>
-                                <td className={RoomHomeStyles.tableHeader}>2</td>
-                                <Link to='/view_booked_room'> 
-                                <td>
-                                    <ArrowRightOutlined style={{fontSize:'2vw', padding:'0.5vw 0vw 0vw 1vw', color:'black'}}/>
-                                </td></Link>  
+                            {bookings.length!=0&&bookings.map((booking)=>(
+                                <tr className={RoomHomeStyles.tableRow}>
+                                <td className={RoomHomeStyles.tableData}>{booking.room_no}</td>
+                                <td className={RoomHomeStyles.tableData}>{booking.check_in_date}</td>
+                                <td className={RoomHomeStyles.tableData}>{booking.check_out_date}</td>
+                                <td className={RoomHomeStyles.tableData}>{booking.noOf_people}</td>
+                                <td className={RoomHomeStyles.tableData}>{booking.customerId}</td>
+
+                                  
                                
                     
                             </tr>
+                            ))}
                             
 
                         </table>
                         </center>
-                    </div>
+                    </div>:<div>
+                        <h3>No Bookings For This Room</h3>
+                        </div>}
                 </div>
                 <div ><SubFooter/></div>
             </div>
