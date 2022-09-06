@@ -38,7 +38,7 @@ function AddRoom()
 
   function addNewRoom(){
     alert(roomNo)
-    \
+    
 
     
     alert(roomType)
