@@ -44,6 +44,7 @@
     padding-left: 2vw;
     color: white;
     text-underline-offset: 0;
+    height: 2.5vw;
   }
 
 a{
@@ -59,13 +60,20 @@ a{
     color: rgb(255, 255, 255);
     cursor: pointer;
     border-radius: 0.5vw;
-    height: 3vw;
+    height: 2.5vw;
     width: 8vw;
   }
 
 li{
     list-style-type: none;
-  
-
 }
 
+h1:active {
+  background-color: rgb(70, 119, 88);
+  opacity: 0.5;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 0.5vw;
+  height: 2.5vw;
+  width: 8vw;
+}

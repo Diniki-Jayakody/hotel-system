@@ -125,9 +125,6 @@ function AddRoom()
                         <input  type='file' className={RoomHomeStyles.inputs}/> <br/>
 
                        <center><button className={RoomHomeStyles.submitBtn} type="Submit" value="Submit" onsubmit="return validateForm()" onClick={addNewRoom}>Add Room</button></center> </div>
-
-                        
-
                     </div>
                     
                    
