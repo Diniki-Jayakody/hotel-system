@@ -21,8 +21,8 @@ function AddBooking()
 
   const[roomNo , setRoomNo] = useState(0)
   const[roomType , setRoomType] = useState("")
-  const[price , setPrice] = useState(0)
-  const[sleeps , setSleeps] = useState("")
+  const[checkInDate , setCheckInDate] = useState('')
+  const[checkOutDate , setCheckOutDate] = useState("")
 
   function addNewBooking(){
     alert(roomNo)
@@ -30,7 +30,8 @@ function AddBooking()
     hotelApi.post("/room/add",{
       roomNo,
       roomType,
-      sleeps,
+      checkInDate,
+      checkOutDate,
 
   })
   .then((res) => { 
@@ -53,8 +54,8 @@ function AddBooking()
         <>
         
          <div>
-            <NavBar/>
-            <div style={{height:'auto', width:'65vw', marginLeft:'30vw'}}>
+            
+            <div style={{height:'auto', width:'65vw', marginLeft:'10vw'}}>
         
                     <div> <Link to='/room_home'>
                     <Button type="primary" icon={<ArrowLeftOutlined style={{fontSize:'2vw'}}/>} >
@@ -63,22 +64,30 @@ function AddBooking()
      
                     <div style={{height:'0.25vw'}}></div>
                     
-                    <div  className={RoomHomeStyles.form}>
-                        <h2 style={{textAlign:'center'}}>Add Booking</h2>
-                        <p className={RoomHomeStyles.labels}>Room Type</p>
-                        <input name='type'type='text' className={RoomHomeStyles.inputs}
-                        value={roomNo}
-                        onChange={(e)=>setRoomType(e.target.value)}/> <br/>
+                    <div  className={RoomHomeStyles.bookingForm}>
+                        <h3 style={{textAlign:'center', paddingTop:'2vw'}}>Book Room</h3>
 
-                        <p className={RoomHomeStyles.labels}>Check in Date</p>
-                        <input name='type'type='text' className={RoomHomeStyles.inputs}
-                        value={roomType}
-                        onChange={(e)=>setRoomType(e.target.value)}/> <br/>
+                        <div style={{marginLeft:'3vw'}}>
+                                <p className={RoomHomeStyles.labels}>Room Type</p>
+                                <input name='type'type='text' className={RoomHomeStyles.inputs}
+                                value={roomNo}
+                                onChange={(e)=>setRoomType(e.target.value)}/> <br/>
 
-                        <p className={RoomHomeStyles.labels}>Check out Date</p>
-                        <input type='text' className={RoomHomeStyles.inputs}
-                        value={sleeps}
-                        onChange={(e)=>setSleeps(e.target.value)}/> <br/>
+                                <p className={RoomHomeStyles.labels}>No of People</p>
+                                <input name='type'type='text' className={RoomHomeStyles.inputs}
+                                value={roomNo}
+                                onChange={(e)=>setRoomType(e.target.value)}/> <br/>
+
+                                <p className={RoomHomeStyles.labels}>Check in Date</p>
+                                <input type='date' className={RoomHomeStyles.inputs}
+                                value={roomType}
+                                onChange={(e)=>setCheckInDate(e.target.value)}/> <br/>
+
+                                <p className={RoomHomeStyles.labels}>Check out Date</p>
+                                <input type='date' className={RoomHomeStyles.inputs}
+                                value={null}
+                                onChange={(e)=>setCheckOutDate(e.target.value)}/> <br/>
+                        </div>
                        
                         
                     </div>
