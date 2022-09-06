@@ -25,18 +25,14 @@ function RoomHome()
     const[rooms , setRooms] = useState([])
     const[room , setRoom] = useState({})
     const[logicRoom , setLogicRoom] = useState(false)
-    const[roomNo , setRoomNo] = useState(0)
-    const[imageUrl , setImageUrl] = useState("../Resources/Room.png")
 
 
     function deleteRoom(){
-        alert(room.room_no)
         hotelApi.delete("/room/delete/"+room.room_no,{
 
         })
         .then((res) => { 
             console.log("result - ",res.data)
-           // alert(res.data.msg)
             if(res.data.msg=="deleted"){
                 alert("deleted")
                 window.location.reload()
@@ -156,26 +152,6 @@ function RoomHome()
                     
                             </tr>
                             ))}
-                            
-                            {/* <tr className={RoomHomeStyles.tableRow}>
-                                <td className={RoomHomeStyles.tableData}>R001</td>
-                                <td className={RoomHomeStyles.tableData}>abcd</td>
-                                <td className={RoomHomeStyles.tableData}>2</td>
-                                <td className={RoomHomeStyles.tableData}>23000</td>
-                                <Link to={viewroom}> <td style={{padding:'1vw 2vw 0vw 1vw', border:'none'}}>{">>"}</td></Link>  
-                               
-                    
-                            </tr>
-
-                            <tr className={RoomHomeStyles.tableRow}>
-                                <td className={RoomHomeStyles.tableData}>R001</td>
-                                <td className={RoomHomeStyles.tableData}>abcd</td>
-                                <td className={RoomHomeStyles.tableData}>2</td>
-                                <td className={RoomHomeStyles.tableData}>23000</td>
-                                <Link to='/view_room'> <td style={{padding:'1vw 2vw 0vw 1vw', border:'none'}}>{">>"}</td></Link>  
-                               
-                    
-                            </tr> */}
                             
 
                         </table>
