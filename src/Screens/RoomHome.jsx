@@ -8,7 +8,7 @@ import NavBar from '../Common_Components/NavBar';
 import SubFooter from '../Common_Components/SubFooter';
 import { useState, useEffect } from "react";
 import hotelApi from "../api/sliitApi";
-import Image from './Image/Room.png'
+import Image from './Image/hotelRoom.jpg'
 
 
 
@@ -86,34 +86,41 @@ function RoomHome()
            {logicRoom?<div>
                 <div>
                    {/* <button onClick={backToRoomHome}> back</button> */}
-                   <div><Link to={backToRoomHome}>
+                   <div onClick={backToRoomHome}>
                     <Button style={{border:'none', backgroundColor:'transparent', fontWeight:'580', fontSize:'1.3vw', margin:'4vw 0vw 0vw 4vw'}} icon={<ArrowLeftOutlined style={{fontSize:'1.6vw'}}/>} >
                         Back</Button>
-                    </Link></div>
+                    </div>
                 </div>
-          <center>  <div style={{height: '37vw', width:'40vw', borderRadius:'1vw', backgroundColor:'#F1F1F1'}}>
-                    <h3 style={{paddingTop:'3vw'}}>View Rooms</h3>
+          <center>  <div style={{height: '67vw', width:'40vw', borderRadius:'1vw', backgroundColor:'#F1F1F1'}}>
+                    <h3 style={{paddingTop:'3vw'}}>View Room</h3>
                     <table>
                         <tr>
-                        <td><h4>Room Type</h4></td>
-                        <td><h5>{room.room_type}</h5></td>
+                        <td><h4 className={RoomHomeStyles.dataTitle}>Room Type</h4></td>
+                        <td><h6 className={RoomHomeStyles.mappedData}>{room.room_type}</h6></td>
                         </tr>
                         <tr>
-                        <td><h4>Description</h4></td>
-                        <td><h6>{room.description}</h6></td>
+                        <td><h4 className={RoomHomeStyles.dataTitle}>Description</h4></td>
+                        <td><h6 className={RoomHomeStyles.mappedData}>{room.description}</h6></td>
                         </tr>
                         <tr>
-                        <td><h4>Sleeps</h4></td>
-                        <td><h6>{room.sleeps}</h6></td>
+                        <td><h4 className={RoomHomeStyles.dataTitle}>Sleeps</h4></td>
+                        <td><h6 className={RoomHomeStyles.mappedData}>{room.sleeps}</h6></td>
                         </tr>
                         <tr>
-                        <td><h4>Facilities</h4></td>
-                        <td><h6>{room.facilities}</h6></td>
+                        <td><h4 className={RoomHomeStyles.dataTitle}>Facilities</h4></td>
+                        <td><h6 className={RoomHomeStyles.mappedData}>{room.facilities}</h6></td>
                         </tr>
-                        <td><h4>Price</h4></td>
-                        <td><p>{room.current_price}</p></td>
+                        <tr>
+                        <td><h4 className={RoomHomeStyles.dataTitle}>Price</h4></td>
+                        <td><h6 className={RoomHomeStyles.mappedData}>{room.current_price}</h6></td>
+                        </tr>
+                      <tr>
+                            <img src={Image} style={{height:'15vw', width:'20vw', borderRadius:'1.8vw'}}></img>
+                        </tr>
                       
                     </table>
+                    <div style={{marginTop:'2vw'}}>
+                   
                     <Popconfirm
                     style={{
                         height:'8vw', width:'15vw', backgroundColor:'transparent', opacity:'0.4'
@@ -125,12 +132,14 @@ function RoomHome()
     cancelText="No"
 
   >
-                <button style={{float:'right', backgroundColor:'red', border:'none', opacity:'0.7', color:'aliceblue', height:'3vw', width:'8vw', borderRadius:'0.6vw'}}>Delete</button>
+                <button style={{float:'right', backgroundColor:'red', border:'none', opacity:'0.7', color:'aliceblue', height:'3vw', width:'8vw', borderRadius:'0.6vw',marginLeft:'2vw'}}>Delete</button>
                 </Popconfirm>
+                <button style={{float:'right', backgroundColor:'#D08C05', border:'none', opacity:'0.7', color:'aliceblue', height:'3vw', width:'8vw', borderRadius:'0.4vw'}}>Update</button>
+                </div>
                   
                 </div>
                 </center>    
-                <div>
+                <div style={{height:'2vw'}}>
                     
 
                 </div>

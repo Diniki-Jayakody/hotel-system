@@ -39,6 +39,19 @@
     border: 0ch;
     font-size: 1vw;
   }
+.mappedData{
+  height: 2.5vw;
+  width: 10vw;
+  background-color:white;
+  text-align: center;
+  border-radius: 0.7vw;
+  padding-top: 0.4vw;
+  font-size: 1.1vw;
+}
+
+.dataTitle{
+  font-size: 1.3vw;
+}
 
   .Reportbttons{
     background-color: #052E03;
