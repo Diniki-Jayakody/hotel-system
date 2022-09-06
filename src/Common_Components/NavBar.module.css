@@ -55,13 +55,17 @@ a{
 
   .h2:hover{
     background-color: rgb(70, 119, 88);
+    opacity: 0.5;
     color: rgb(255, 255, 255);
     cursor: pointer;
     border-radius: 0.5vw;
+    height: 3vw;
+    width: 8vw;
   }
 
 li{
     list-style-type: none;
+  
 
 }
 
