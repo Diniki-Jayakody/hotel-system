@@ -10,7 +10,7 @@
 .bookingForm{
   height: 36vw;
   width: 50vw;
-  margin-top: 1vw;
+  margin: 1vw 0vw 0vw 8vw;
   border:0.3vw;
   border-color: #868886;
   border-radius: 1vw;

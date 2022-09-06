@@ -1,7 +1,6 @@
 
 import React from "react";
 import {Link} from 'react-router-dom'
-import arrow from '../Resources/arrow.jpg'
 import { Button } from "antd";
 import {ArrowLeftOutlined  } from '@ant-design/icons';
 import RoomHomeStyles from './AddRoom.module.css';
@@ -54,10 +53,10 @@ function AddBooking()
         
          <div>
             
-            <div style={{height:'auto', width:'65vw', marginLeft:'10vw'}}>
+            <div style={{height:'auto', width:'45vw', marginLeft:'15vw'}}>
         
-                    <div> <Link to='/room_home'>
-                    <Button style={{border:'none', backgroundColor:'transparent', fontWeight:'580', fontSize:'1.3vw'}} icon={<ArrowLeftOutlined style={{fontSize:'1.6vw'}}/>} >
+                    <div> <Link to='/'>
+                    <Button style={{border:'none', backgroundColor:'transparent', fontWeight:'580', fontSize:'1.3vw', marginTop:'2vw'}} icon={<ArrowLeftOutlined style={{fontSize:'1.6vw'}}/>} >
                         Back</Button>
                         </Link></div>
      
@@ -66,26 +65,35 @@ function AddBooking()
                     <div  className={RoomHomeStyles.bookingForm}>
                         <h3 style={{textAlign:'center', paddingTop:'2vw'}}>Book Room</h3>
 
-                        <div style={{marginLeft:'3vw'}}>
-                                <p className={RoomHomeStyles.labels}>Room No</p>
-                                <input name='type'type='text' className={RoomHomeStyles.inputs}
+                        <div >
+                          <table>
+                            <tr>
+                              <td><label className={RoomHomeStyles.labels}>Room No</label></td>  
+                              <td> <input name='type'type='text' className={RoomHomeStyles.inputs}
                                 value={roomNo}
-                                onChange={(e)=>setRoomNo(e.target.value)}/> <br/>
-
-                                <p className={RoomHomeStyles.labels}>No of People</p>
-                                <input name='type'type='text' className={RoomHomeStyles.inputs}
-                                value={noOf_people}
-                                onChange={(e)=>setNoOf_people(e.target.value)}/> <br/>
-
-                                <p className={RoomHomeStyles.labels}>Check in Date</p>
-                                <input type='date' className={RoomHomeStyles.inputs}
-                                value={check_in_date}
-                                onChange={(e)=>setCheck_in_date(e.target.value)}/> <br/>
-
-                                <p className={RoomHomeStyles.labels}>Check out Date</p>
-                                <input type='date' className={RoomHomeStyles.inputs}
-                                value={check_out_date}
-                                onChange={(e)=>setCheck_out_date(e.target.value)}/> <br/>
+                                onChange={(e)=>setRoomNo(e.target.value)}/> </td>  
+                            </tr>
+                                <br/>
+                                <tr>
+                                  <td><label className={RoomHomeStyles.labels}>No of People</label></td>
+                                  <td><input name='type'type='text' className={RoomHomeStyles.inputs}
+                                  value={noOf_people}
+                                  onChange={(e)=>setNoOf_people(e.target.value)}/> </td>
+                                </tr>
+                                <br/>
+                                <tr>
+                                <td><label className={RoomHomeStyles.labels}>Check in Date</label></td>
+                                <td><input type='date' className={RoomHomeStyles.inputs}
+                                  value={check_in_date}
+                                  onChange={(e)=>setCheck_in_date(e.target.value)}/></td>
+                                </tr>  <br/>
+                                <tr>
+                                <td><label className={RoomHomeStyles.labels}>Check out Date</label></td>
+                                <td><input type='date' className={RoomHomeStyles.inputs}
+                                  value={check_out_date}
+                                  onChange={(e)=>setCheck_out_date(e.target.value)}/> </td>
+                                </tr><br/>
+                              </table>
                         </div>
                        <center><button onClick={addNewBooking} className={RoomHomeStyles.submitBtn}>Book</button></center> 
                         
