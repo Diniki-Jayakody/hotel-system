@@ -91,11 +91,15 @@ function RoomBookingHome()
                 <NavBar/>
                 <div style={{height:'auto', width:'65vw', marginLeft:'26vw'}}>
                     <div>
-                        <button className={RoomHomeStyles.bookingHmSearch} style={{float:'right'}}>Generate Report</button>
+                        <button className={RoomHomeStyles.bttons} style={{float:'right', marginTop:'2vw'}}>Generate Report</button>
                         <div style={{height:'8vw'}}></div>
-                        <input placeholder="Room No"  value={roomNo}
-                        onChange={(e)=>setroomNo(e.target.value)}></input>
-                        <button className={RoomHomeStyles.bookingHmSearch}style={{float:'right'}} onClick={getBookingByRoom}><SearchOutlined/>Search </button>
+                        <table style={{float:'right'}}>
+                            <tr>
+                             <td><input style={{height:'2vw', width:'10vw', borderRadius:'0.8vw', fontSize:'1.2vw'}} placeholder="Room No"  value={roomNo}
+                                onChange={(e)=>setroomNo(e.target.value)}></input></td>   
+                                <td> <button className={RoomHomeStyles.searchBtn} style={{float:'right'}} onClick={getBookingByRoom}><SearchOutlined style={{fontSize:'1.5vw'}}/> </button></td>   
+                            </tr>
+                        </table>
                     </div>
                     <div style={{height:'4vw'}}></div>
                    {bookings.length!=0? <div>
@@ -130,7 +134,7 @@ function RoomBookingHome()
                         </table>
                         </center>
                     </div>:<div>
-                        <h3>No Bookings For This Room</h3>
+                        <h3 style={{fontSize:'1.5vw'}}>No Bookings Available For This Room</h3>
                         </div>}
                 </div>
                 <div ><SubFooter/></div>
