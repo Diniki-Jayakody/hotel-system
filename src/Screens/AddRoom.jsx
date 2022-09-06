@@ -24,7 +24,7 @@ function AddRoom()
             <NavBar/>
             <div style={{height:'auto', width:'65vw', marginLeft:'30vw'}}>
         
-                    <div> <Link to='/room_home'><button style={{paddingLeft: '0vw', border: 0, backgroundColor: "white", padding: 'vw'}}><img src={arrow} width="20vw" height="20vw"/> Back</button ></Link></div>
+                    <div> <Link to='/room_home'><button className={RoomHomeStyles.back} style={{paddingLeft: '0vw', border: 0, backgroundColor: "white", padding: 'vw'}}><img src={arrow} width="20vw" height="20vw"/> Back</button ></Link></div>
      
                     <div style={{height:'0.25vw'}}></div>
                     <form name="addForm" action="/post form" method="post" onsubmit="return validateForm()">

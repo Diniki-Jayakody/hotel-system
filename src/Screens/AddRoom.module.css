@@ -44,4 +44,8 @@ input[type=text]:focus {
     cursor: pointer;
   }
   
+  .back{
+    cursor: pointer;
+    background: #000;
+  }
 
