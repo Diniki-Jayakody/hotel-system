@@ -7,6 +7,13 @@ import NavBar from '../Common_Components/NavBar';
 import SubFooter from '../Common_Components/SubFooter';
 import { useState, useEffect } from "react";
 import hotelApi from "../api/sliitApi";
+import Image from './Image/Room.png'
+
+
+
+
+import { message, Popconfirm } from 'antd';
+
 
 
 function RoomHome()
@@ -17,14 +24,19 @@ function RoomHome()
     const[rooms , setRooms] = useState([])
     const[room , setRoom] = useState({})
     const[logicRoom , setLogicRoom] = useState(false)
+    const[roomNo , setRoomNo] = useState(0)
+    const[imageUrl , setImageUrl] = useState("../Resources/Room.png")
 
-    function deleteRoom(roomNo){
-        hotelApi.delete("/room/delete/"+roomNo,{
+
+    function deleteRoom(){
+        alert(room.room_no)
+        hotelApi.delete("/room/delete/"+room.room_no,{
 
         })
         .then((res) => { 
             console.log("result - ",res.data)
-            if(res.data=="deleted"){
+           // alert(res.data.msg)
+            if(res.data.msg=="deleted"){
                 alert("deleted")
                 window.location.reload()
             }
@@ -36,9 +48,25 @@ function RoomHome()
       });
     }
 
+    const confirm = (e) => {
+        console.log(e);
+        message.success('Click on Yes');
+        deleteRoom()
+      };
+      
+      const cancel = (e) => {
+        console.log(e);
+        message.error('Click on No');
+        window.location.reload()
+      };
+
     function selectRoom(room){
         setRoom(room)
         setLogicRoom(true)
+    }
+
+    function backToRoomHome(){
+        setLogicRoom(false)
     }
 
     useEffect(()=>{
@@ -59,7 +87,39 @@ function RoomHome()
     
     return(
         <>
-            <div>
+           {logicRoom?<div>
+                <div>
+                   <button onClick={backToRoomHome}> back</button>
+                </div>
+                <div>
+                    <h3>View Rooms</h3>
+                    <h4>{room.room_type}</h4>
+                    <p></p>
+                    <h4>{room.description}</h4>
+                    <p></p>
+                    <h4>{room.sleeps}</h4>
+                    <p></p>
+                    <h4>{room.facilities}</h4>
+                    <p></p>
+                    <h4>{room.current_price}</h4>
+                    <p></p>
+                    <img src={Image}></img>
+                  
+                </div>
+                <div>
+                    <button>Update</button> 
+                <Popconfirm
+    title="Are you sure to delete this room?"
+    onConfirm={confirm}
+    onCancel={cancel}
+    okText="Yes"
+    cancelText="No"
+  >
+                <button>Delete</button>
+                </Popconfirm>
+                </div>
+                
+            </div>: <div>
                 <NavBar/>
                 <div className={RoomHomeStyles.btnBox} style={{height:'auto', width:'65vw', marginLeft:'26vw', margintop: '200vw'}}>
                     <div className="butn-box">
@@ -81,8 +141,20 @@ function RoomHome()
   
                                
                             </tr>
+
+                            {rooms.length!=0&&rooms.map((room)=>(
+                                <tr className={RoomHomeStyles.tableRow}>
+                                <td className={RoomHomeStyles.tableData}>{room.room_no}</td>
+                                <td className={RoomHomeStyles.tableData}>{room.room_type}</td>
+                                <td className={RoomHomeStyles.tableData}>{room.sleeps}</td>
+                                <td className={RoomHomeStyles.tableData}>{room.current_price}</td>
+                                <td style={{padding:'1vw 2vw 0vw 1vw', border:'none'}} onClick={()=>selectRoom(room)}>{">>"}</td>  
+                               
+                    
+                            </tr>
+                            ))}
                             
-                            <tr className={RoomHomeStyles.tableRow}>
+                            {/* <tr className={RoomHomeStyles.tableRow}>
                                 <td className={RoomHomeStyles.tableData}>R001</td>
                                 <td className={RoomHomeStyles.tableData}>abcd</td>
                                 <td className={RoomHomeStyles.tableData}>2</td>
@@ -100,7 +172,7 @@ function RoomHome()
                                 <Link to='/view_room'> <td style={{padding:'1vw 2vw 0vw 1vw', border:'none'}}>{">>"}</td></Link>  
                                
                     
-                            </tr>
+                            </tr> */}
                             
 
                         </table>
@@ -108,7 +180,7 @@ function RoomHome()
                     </div>
                 </div>
                 <div ><SubFooter/></div>
-            </div>
+            </div>}
         </>
     );
 }
