@@ -10,11 +10,16 @@
 .bookingForm{
   height: 36vw;
   width: 50vw;
-  margin-top: 4vw;
-  background-color: #F1F1F1;
+  margin-top: 1vw;
+  border:0.3vw;
+  border-color: #868886;
   border-radius: 1vw;
 }
 
+.labels{
+  font-size: 1.2vw;
+  font-weight: 650;
+}
 
 .form{
 
@@ -29,7 +34,7 @@
 input[type=text]:focus {
     background-color: rgb(255, 255, 255);
     width: 30vw;
-    height: 4vh;
+    height: 2vw;
   /* padding: 12px 20px; */
   /* margin: 8px 0; *
  
@@ -39,14 +44,7 @@ input[type=text]:focus {
     height: 3vh
   }
 
-  .submitBtn {
-    background-color: #052E03;
-    color: aliceblue;
-    height: 2.5vw;
-    width: 11vw;
-    border-radius: 2vw;
-    border: 0ch;
-  }
+
 
   .submitBtn:hover{
     background-color: rgb(70, 119, 88);
@@ -92,4 +90,12 @@ input[type=text]:focus {
     cursor: pointer;
   }
 
- 
+  .submitBtn {
+    background-color: #052E03;
+    color: aliceblue;
+    height: 2.5vw;
+    width: 11vw;
+    border-radius: 2vw;
+    border: 0ch;
+    margin-top: 2vw;
+  }

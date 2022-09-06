@@ -5,7 +5,7 @@ import arrow from '../Resources/arrow.jpg'
 import { Button } from "antd";
 import {ArrowLeftOutlined  } from '@ant-design/icons';
 import RoomHomeStyles from './AddRoom.module.css';
-import NavBar from '../Common_Components/NavBar'
+import Footer from '../Common_Components/Footer'
 import { useState } from "react";
 import hotelApi from "../api/sliitApi";
 
@@ -58,11 +58,11 @@ function AddBooking()
             <div style={{height:'auto', width:'65vw', marginLeft:'10vw'}}>
         
                     <div> <Link to='/room_home'>
-                    <Button type="primary" icon={<ArrowLeftOutlined style={{fontSize:'2vw'}}/>} >
+                    <Button style={{border:'none', backgroundColor:'transparent', fontWeight:'600', fontSize:'1.4vw'}} icon={<ArrowLeftOutlined style={{fontSize:'1.6vw'}}/>} >
                         Back</Button>
                         </Link></div>
      
-                    <div style={{height:'0.25vw'}}></div>
+                   
                     
                     <div  className={RoomHomeStyles.bookingForm}>
                         <h3 style={{textAlign:'center', paddingTop:'2vw'}}>Book Room</h3>
@@ -88,12 +88,13 @@ function AddBooking()
                                 value={null}
                                 onChange={(e)=>setCheckOutDate(e.target.value)}/> <br/>
                         </div>
-                       
+                       <center><button onClick={addNewBooking} className={RoomHomeStyles.submitBtn}>Book</button></center> 
                         
                     </div>
                     
-                    <button onClick={addNewBooking}>Book</button>
+           
            </div>
+           <div><Footer/></div>
         </div>
         </>
     );
