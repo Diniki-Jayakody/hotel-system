@@ -111,7 +111,7 @@ function AddRoom()
                         value={description}
                         onChange={(e)=>setDescription(e.target.value)}/> <br/>
                         <div><p className={RoomHomeStyles.labels}>Image</p>
-                        <input type='file' className={RoomHomeStyles.inputs}/> <br/>
+                        <input  type='file' className={RoomHomeStyles.inputs}/> <br/>
 
                         <button className={RoomHomeStyles.addNewRoomBtn} type="Submit" value="Submit" onsubmit="return validateForm()" onClick={addNewRoom}>Add Rooms</button></div>
 

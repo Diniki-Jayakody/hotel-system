@@ -7,6 +7,7 @@ import customer from "../Resources/Cus.png";
 import employee from "../Resources/Emp.png";
 import payment from "../Resources/Payment.png";
 import addRoom from "../Resources/Room plus.png";
+import Room from "../Resources/Room.png";
 
 import NavBarStyles from './NavBar.module.css';
 
@@ -27,7 +28,7 @@ function NavBar()
                             </li>
                             <li className={NavBarStyles.li}>
                                 <a href="/room_home">
-                                <table><tr><td><img src={addRoom} className={NavBarStyles.imgIcon}/></td>
+                                <table><tr><td><img src={Room} className={NavBarStyles.imgIcon}/></td>
                                 <td><h2 className={NavBarStyles.h2}>Room</h2></td></tr></table> 
                                 </a>
                             </li>
