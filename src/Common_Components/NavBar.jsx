@@ -17,7 +17,7 @@ function NavBar()
     return(
         <>
             <div className={NavBarStyles.box}>
-             <div className={NavBarStyles.logoBox}></div>
+             <div className={NavBarStyles.logoBox}>LOGO</div>
                <div className={NavBarStyles.navBox}>
                         <ul className={NavBarStyles.ul}>
                             <li className={NavBarStyles.li}>
