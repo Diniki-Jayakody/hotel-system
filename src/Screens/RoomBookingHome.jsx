@@ -5,6 +5,7 @@ import {SearchOutlined } from '@ant-design/icons';
 import {ArrowRightOutlined } from '@ant-design/icons';
 import RoomHomeStyles from './RoomHome.module.css';
 import NavBar from '../Common_Components/NavBar';
+import SubFooter from '../Common_Components/SubFooter';
 import { useState } from "react";
 import hotelApi from "../api/sliitApi";
 
@@ -107,6 +108,7 @@ function RoomBookingHome()
                         </center>
                     </div>
                 </div>
+                <div ><SubFooter/></div>
             </div>
         </>
     );
