@@ -5,8 +5,6 @@
     font-size: 1.2vw;
 }
 
-
-
 .btnBox{
   padding-top: 2vw;
 }
@@ -18,6 +16,9 @@
 
 }
 
+.viewTble{
+  height: 5vw;
+}
 .Reportbttons:hover{
   background-color: rgb(70, 119, 88);
   color: rgb(255, 255, 255);
@@ -76,3 +77,4 @@
     color: rgb(255, 255, 255);
     cursor: pointer;
   }
+ 

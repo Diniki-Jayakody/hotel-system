@@ -87,14 +87,14 @@ function RoomHome()
                 <div>
                    {/* <button onClick={backToRoomHome}> back</button> */}
                    <div onClick={backToRoomHome}>
-                    <Button style={{border:'none', backgroundColor:'transparent', fontWeight:'580', fontSize:'1.3vw', margin:'4vw 0vw 0vw 4vw'}} icon={<ArrowLeftOutlined style={{fontSize:'1.6vw'}}/>} >
+                    <Button style={{border:'none', backgroundColor:'transparent', fontWeight:'580', fontSize:'1.3vw', margin:'3vw 0vw 0vw 4vw'}} icon={<ArrowLeftOutlined style={{fontSize:'1.6vw'}}/>} >
                         Back</Button>
                     </div>
                 </div>
           <center>  <div style={{height: '67vw', width:'40vw', borderRadius:'1vw', backgroundColor:'#F1F1F1'}}>
-                    <h3 style={{paddingTop:'3vw'}}>View Room</h3>
-                    <table>
-                        <tr>
+                    <h3 style={{paddingTop:'1vw'}}>View Room</h3>
+                    <table className={RoomHomeStyles.viewTble}>
+                        <tr className={RoomHomeStyles.tablerow}>
                         <td><h4 className={RoomHomeStyles.dataTitle}>Room Type</h4></td>
                         <td><h6 className={RoomHomeStyles.mappedData}>{room.room_type}</h6></td>
                         </tr>
