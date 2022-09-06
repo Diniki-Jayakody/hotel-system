@@ -7,6 +7,16 @@ import NavBar from '../Common_Components/NavBar'
 import { useState } from "react";
 import hotelApi from "../api/sliitApi";
 
+
+
+
+
+
+
+
+
+
+
 function validateForm() {
     let x = document.forms["addForm"]["type"].value;
     if (x == "") {
@@ -17,15 +27,24 @@ function validateForm() {
 function AddRoom()
 {
 
+
   const[roomNo , setRoomNo] = useState(0)
   const[roomType , setRoomType] = useState("")
   const[price , setPrice] = useState(0)
   const[sleeps , setSleeps] = useState("")
   const[facilities , setFacilities] = useState("")
   const[description , setDescription] = useState("")
-  const[imageUrl , setImageUrl] = useState("")
+  const[imageUrl , setImageUrl] = useState("../Resources/Room.png")
 
   function addNewRoom(){
+    alert(roomNo)
+    \
+
+    
+    alert(roomType)
+    
+    
+    
     hotelApi.post("/room/add",{
       roomNo,
       roomType,
@@ -38,8 +57,8 @@ function AddRoom()
   .then((res) => { 
       console.log("result - ",res.data)
     //  alert(res.data)
-      if(res.data=="added"){
-          alert("Sent Successfully")
+      if(res.data.msg=="added"){
+          alert("Added Successfully")
           window.location.reload()
       }
   })
@@ -52,7 +71,9 @@ function AddRoom()
     
     return(
         
-        <>
+    
+    
+    <>
         
          <div>
             <NavBar/>
@@ -61,7 +82,7 @@ function AddRoom()
                     <div> <Link to='/room_home'><button className={RoomHomeStyles.generateReportBtn} style={{paddingLeft: '0vw', border: 0, backgroundColor: "white", padding: 'vw'}}><img src={arrow} width="20vw" height="20vw"/> Back</button ></Link></div>
      
                     <div style={{height:'0.25vw'}}></div>
-                    <form name="addForm" action="/post form" method="post" onsubmit="return validateForm()">
+                    
                     <div  className={RoomHomeStyles.form}>
                         <h2 style={{textAlign:'center'}}>Add Rooms</h2>
                         <p className={RoomHomeStyles.labels}>Room No</p>
@@ -91,9 +112,13 @@ function AddRoom()
                         <p className={RoomHomeStyles.labels}>Image</p>
                         <input type='file' className={RoomHomeStyles.inputs}/> <br/>
 
-                        <button className={RoomHomeStyles.AddRoomBtn} type="Submit" value="Submit" onsubmit="return validateForm()" onClick={addNewRoom}>Add Rooms</button>
+                        <button type="Submit" value="Submit" onsubmit="return validateForm()" onClick={addNewRoom}>Add Rooms</button>
+
+                        
+
                     </div>
-                    </form>
+                    
+                    <button onClick={addNewRoom}>Add Rooms</button>
            </div>
         </div>
         </>

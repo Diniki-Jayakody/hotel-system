@@ -1,6 +1,6 @@
 .box{
-    height: 95%;
-    width: 22%;
+    height: 47.5vw;
+    width: 22vw;
     background-color: #052E03;
     position: absolute;
     
@@ -14,8 +14,8 @@
 
 .navBtn{
     border: none;
-    height: 20%;
-    width: 100%;
+    height: 5vw;
+    width: 16vw;
     background-color: transparent;
     color: white;
 }
