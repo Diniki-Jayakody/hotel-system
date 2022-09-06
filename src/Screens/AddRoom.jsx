@@ -85,6 +85,7 @@ function AddRoom()
                     
                     <div  className={RoomHomeStyles.form}>
                         <h2 style={{textAlign:'center'}}>Add Rooms</h2>
+                        <label className={RoomHomeStyles.labels}></label>
                         <p className={RoomHomeStyles.labels}>Room No</p>
                         <input name='type'type='text' className={RoomHomeStyles.inputs}
                         value={roomNo}
@@ -109,16 +110,16 @@ function AddRoom()
                         <textarea type='text' className={RoomHomeStyles.inputs}
                         value={description}
                         onChange={(e)=>setDescription(e.target.value)}/> <br/>
-                        <p className={RoomHomeStyles.labels}>Image</p>
+                        <div><p className={RoomHomeStyles.labels}>Image</p>
                         <input type='file' className={RoomHomeStyles.inputs}/> <br/>
 
-                        <button type="Submit" value="Submit" onsubmit="return validateForm()" onClick={addNewRoom}>Add Rooms</button>
+                        <button className={RoomHomeStyles.addNewRoomBtn} type="Submit" value="Submit" onsubmit="return validateForm()" onClick={addNewRoom}>Add Rooms</button></div>
 
                         
 
                     </div>
                     
-                    <button onClick={addNewRoom}>Add Rooms</button>
+                    {/* <button onClick={addNewRoom}>Add Rooms</button> */}
            </div>
         </div>
         </>
