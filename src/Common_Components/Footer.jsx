@@ -11,7 +11,7 @@ function Footer()
                 <table>
                     <row>
                         <td className={FooterStyles.footerContent}>
-                            <h3>Logo</h3>
+                            <h3>LOGO</h3>
                             <p className={FooterStyles.footerData}>
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
                             </p>

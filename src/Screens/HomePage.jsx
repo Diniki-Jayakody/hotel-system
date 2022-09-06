@@ -11,9 +11,8 @@ function HomePage()
     return(
         <>
         <div className={HomePageStyles.screen}>
-            <Header/>
-            <NavBar/>
-            <Footer/>
+           <div><Header/></div> 
+           <div><Footer/></div> 
         </div>
         </>
     );

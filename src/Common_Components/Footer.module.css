@@ -1,6 +1,6 @@
 .footerBox{
     height: 27%;
-    width: 100%;
+    width: 100vw;
     top:73%;
     background-color: rgb(6, 46, 13);
     position: fixed;
