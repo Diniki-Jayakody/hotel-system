@@ -46,7 +46,10 @@
     text-underline-offset: 0;
   }
 
-
+a{
+  display: inline-block;
+  text-decoration: none;
+}
 
 
 
