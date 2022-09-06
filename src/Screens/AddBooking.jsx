@@ -27,8 +27,6 @@ function AddBooking()
   const[customerId , setCustomerId] = useState("")
 
   function addNewBooking(){
-    alert(roomNo)
-    alert(check_in_date)
     hotelApi.post("/booking/add",{
       roomNo,
       customerId:"12345678a",
@@ -38,8 +36,7 @@ function AddBooking()
   })
   .then((res) => { 
       console.log("result - ",res.data)
-    //  alert(res.data)
-      if(res.data=="added"){
+      if(res.data.msg=="added"){
           alert("Added Successfully")
           window.location.reload()
       }

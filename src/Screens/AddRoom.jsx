@@ -37,13 +37,6 @@ function AddRoom()
   const[imageUrl , setImageUrl] = useState("../Resources/Room.png")
 
   function addNewRoom(){
-    alert(roomNo)
-    
-
-    
-    alert(roomType)
-    
-    
     
     hotelApi.post("/room/add",{
       roomNo,
@@ -56,7 +49,6 @@ function AddRoom()
   })
   .then((res) => { 
       console.log("result - ",res.data)
-    //  alert(res.data)
       if(res.data.msg=="added"){
           alert("Added Successfully")
           window.location.reload()
@@ -119,7 +111,7 @@ function AddRoom()
 
                     </div>
                     
-                    {/* <button onClick={addNewRoom}>Add Rooms</button> */}
+                   
            </div>
         </div>
         </>
