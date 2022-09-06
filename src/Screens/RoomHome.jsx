@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link} from "react-router-dom";
 
-import {ArrowRightOutlined } from '@ant-design/icons';
+import {ArrowRightOutlined, ArrowLeftOutlined } from '@ant-design/icons';
 import RoomHomeStyles from './RoomHome.module.css';
 import NavBar from '../Common_Components/NavBar';
 import SubFooter from '../Common_Components/SubFooter';
@@ -13,14 +13,13 @@ import Image from './Image/Room.png'
 
 
 
-import { message, Popconfirm } from 'antd';
+import { message, Popconfirm , Button} from 'antd';
 
 
 
 function RoomHome()
 {
     const addroom='/add_room';
-    const viewroom='/view_room';
 
     const[rooms , setRooms] = useState([])
     const[room , setRoom] = useState({})
@@ -86,34 +85,54 @@ function RoomHome()
         <>
            {logicRoom?<div>
                 <div>
-                   <button onClick={backToRoomHome}> back</button>
+                   {/* <button onClick={backToRoomHome}> back</button> */}
+                   <div><Link to={backToRoomHome}>
+                    <Button style={{border:'none', backgroundColor:'transparent', fontWeight:'580', fontSize:'1.3vw', margin:'4vw 0vw 0vw 4vw'}} icon={<ArrowLeftOutlined style={{fontSize:'1.6vw'}}/>} >
+                        Back</Button>
+                    </Link></div>
                 </div>
-                <div>
-                    <h3>View Rooms</h3>
-                    <h4>{room.room_type}</h4>
-                    <p></p>
-                    <h4>{room.description}</h4>
-                    <p></p>
-                    <h4>{room.sleeps}</h4>
-                    <p></p>
-                    <h4>{room.facilities}</h4>
-                    <p></p>
-                    <h4>{room.current_price}</h4>
-                    <p></p>
-                    <img src={Image}></img>
-                  
-                </div>
-                <div>
-                    <button>Update</button> 
-                <Popconfirm
+          <center>  <div style={{height: '37vw', width:'40vw', borderRadius:'1vw', backgroundColor:'#F1F1F1'}}>
+                    <h3 style={{paddingTop:'3vw'}}>View Rooms</h3>
+                    <table>
+                        <tr>
+                        <td><h4>Room Type</h4></td>
+                        <td><h5>{room.room_type}</h5></td>
+                        </tr>
+                        <tr>
+                        <td><h4>Description</h4></td>
+                        <td><h6>{room.description}</h6></td>
+                        </tr>
+                        <tr>
+                        <td><h4>Sleeps</h4></td>
+                        <td><h6>{room.sleeps}</h6></td>
+                        </tr>
+                        <tr>
+                        <td><h4>Facilities</h4></td>
+                        <td><h6>{room.facilities}</h6></td>
+                        </tr>
+                        <td><h4>Price</h4></td>
+                        <td><p>{room.current_price}</p></td>
+                      
+                    </table>
+                    <Popconfirm
+                    style={{
+                        height:'8vw', width:'15vw', backgroundColor:'transparent', opacity:'0.4'
+                    }}
     title="Are you sure to delete this room?"
     onConfirm={confirm}
     onCancel={cancel}
     okText="Yes"
     cancelText="No"
+
   >
-                <button>Delete</button>
+                <button style={{float:'right', backgroundColor:'red', border:'none', opacity:'0.7', color:'aliceblue', height:'3vw', width:'8vw', borderRadius:'0.6vw'}}>Delete</button>
                 </Popconfirm>
+                  
+                </div>
+                </center>    
+                <div>
+                    
+
                 </div>
                 
             </div>: <div>
