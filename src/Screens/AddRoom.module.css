@@ -27,11 +27,21 @@ input[type=text]:focus {
   input{
     width: 20vw;
     height: 5vh
-    
   }
 
-  button {
-    cursor: pointer;
-    transition: 0.5s;
+  .submitBtn {
+    background-color: #052E03;
+    color: aliceblue;
+    height: 2.5vw;
+    width: 11vw;
+    border-radius: 2vw;
+    border: 0ch;
   }
+
+  .submitBtn:hover{
+    background-color: rgb(70, 119, 88);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+  
 

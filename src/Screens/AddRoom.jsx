@@ -10,7 +10,9 @@ function validateForm() {
       alert("Name must be filled out");
       return false;
     }
+    return true
   }
+  
 function AddRoom()
 {
     
@@ -41,7 +43,7 @@ function AddRoom()
                         <p className={RoomHomeStyles.labels}>Image</p>
                         <input type='file' className={RoomHomeStyles.inputs}/> <br/>
 
-                        <button type="Submit" value="Submit" onsubmit="return validateForm()">Add Rooms</button>
+                        <button className={RoomHomeStyles.submitBtn} type="Submit" value="Submit" onsubmit="return validateForm()">Add Rooms</button>
                     </div>
                     </form>
            </div>
