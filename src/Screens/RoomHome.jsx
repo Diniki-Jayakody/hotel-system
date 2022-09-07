@@ -132,7 +132,7 @@ function RoomHome()
     cancelText="No"
 
   >
-                <button style={{float:'right', backgroundColor:'red', border:'none', opacity:'0.7', color:'aliceblue', height:'3vw', width:'8vw', borderRadius:'0.6vw',marginLeft:'2vw'}}>Delete</button>
+                <button className={RoomHomeStyles.delBtn} style={{float:'right',  border:'none', opacity:'0.7', color:'aliceblue', height:'3vw', width:'8vw', borderRadius:'0.6vw',marginLeft:'2vw'}}>Delete</button>
                 </Popconfirm>
                 <button style={{float:'right', backgroundColor:'#D08C05', border:'none', opacity:'0.7', color:'aliceblue', height:'3vw', width:'8vw', borderRadius:'0.4vw'}}>Update</button>
                 </div>

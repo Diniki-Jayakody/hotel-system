@@ -78,3 +78,17 @@
     cursor: pointer;
   }
  
+  .delBtn{
+    background-color: #cb0000;
+    color: aliceblue;
+    height: 2.2vw;
+    width: 3.5vw;
+    border-radius: 0.5vw;
+    border: 0ch;
+  }
+
+  .delBtn:hover{
+    background-color: rgb(255, 39, 39);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
