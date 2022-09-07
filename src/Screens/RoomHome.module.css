@@ -92,3 +92,37 @@
     color: rgb(255, 255, 255);
     cursor: pointer;
   }
+
+  .OkButton{
+    background-color: #005f7f;
+    color: aliceblue;
+    height: 2.2vw;
+    width: 3.5vw;
+    border-radius: 0.5vw;
+    border: 0ch;
+  }
+
+  .OkButton:hover{
+    background-color: #538392;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+  .CancelButton:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 26, 255);
+    cursor: pointer;
+  }
+
+  .CancelButton{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    height: 2.2vw;
+    width: 3.5vw;
+    border-radius: 0.5vw;
+    border: 0ch;
+  }
+
+  .ConfirmTable{
+    background-color: #cfcfcf;
+  }

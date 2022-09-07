@@ -126,14 +126,15 @@ function RoomHome()
                         </tr>
                       
                     </table>
-                    <div style={{marginTop:'2vw'}}>
+                    <div    style={{marginTop:'2vw',paddingBottom: '2vw'}}>
                    
                     {logicDelete&&
-                        <div style={{height:'6vw', width:'20vw', borderRadius:'0.7vw', backgroundColor:'#a2b9bc', opacity:'0.6', border:'blue'}}>
-                                <h6 style={{textAlign:'center'}}>Sure, you want to delete this Room?</h6>
+                        <div style={{height:'7vw', width:'20vw', borderRadius:'0.7vw', backgroundColor:'#cfcfcf', opacity:'0.6', border:'blue'}}>
+                                <h6 style={{textAlign:'center',fontSize: '1vw'}}>Sure, you want to delete this Room?</h6>
                                <table>
-                                <tr>
-                                    <td><button style={{backgroundColor:'blue', border:'none'}} onClick={confirm}>OK</button></td>
+                                <tr> 
+                                    <td><button className={RoomHomeStyles.CancelButton} style={{ border:'none'}} onClick={cancel}>Cancel</button></td>
+                                    <td><button className={RoomHomeStyles.OkButton} style={{ border:'none'}} onClick={confirm}>OK</button></td>
                                     {/* <td><button style={{backgroundColor:'red', border:'none'}} onClick={} type="danger">Cancel</button></td> */}
                                 </tr>
                                 </table>
