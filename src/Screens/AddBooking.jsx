@@ -27,7 +27,8 @@ function AddBooking()
   }
 
   function addNewBooking(){
-    if(!validateFormRequired){
+    let validation = validateFormRequired()
+    if(!validation){
       alert("Please fill the full form")
       return
     }

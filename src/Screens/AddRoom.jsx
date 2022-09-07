@@ -43,11 +43,14 @@ function AddRoom()
     if(roomNo!=0&&roomType!=""&&sleeps!=""&&facilities!=0&&description!=""&&price!=0){
       return true
     }
-    return false
+    else{
+      return false
+    }
   }
 
   function addNewRoom(){
-    if(!validateFormRequired){
+    let validation = validateFormRequired()
+    if(!validation){
       alert("Please fill the full form")
       return
     }
