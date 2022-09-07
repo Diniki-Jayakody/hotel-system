@@ -39,8 +39,18 @@ function AddRoom()
   const[description , setDescription] = useState("")
   const[imageUrl , setImageUrl] = useState("../Resources/Room.png")
 
+  function validateFormRequired() {
+    if(roomNo!=0&&roomType!=""&&sleeps!=""&&facilities!=0&&description!=""&&price!=0){
+      return true
+    }
+    return false
+  }
+
   function addNewRoom(){
-    
+    if(!validateFormRequired){
+      alert("Please fill the full form")
+      return
+    }
     hotelApi.post("/room/add",{
       roomNo,
       roomType,
@@ -104,7 +114,7 @@ function AddRoom()
                              </tr><br/>
                              <tr>
                              <td>  <label className={RoomHomeStyles.labels}>Current Price</label></td> 
-                             <td> <input type='text' className={RoomHomeStyles.inputs}
+                             <td> <input type="number" className={RoomHomeStyles.inputs}
                             value={price}
                             onChange={(e)=>setPrice(e.target.value)}/></td> 
                              </tr><br/>

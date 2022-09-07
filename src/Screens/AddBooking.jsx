@@ -8,13 +8,7 @@ import Footer from '../Common_Components/Footer'
 import { useState } from "react";
 import hotelApi from "../api/sliitApi";
 
-function validateForm() {
-    let x = document.forms["addForm"]["type"].value;
-    if (x == "") {
-      alert("Name must be filled out");
-      return false;
-    }
-  }
+
 function AddBooking()
 {
 
@@ -25,7 +19,18 @@ function AddBooking()
   const[noOf_people , setNoOf_people] = useState(0)
   const[customerId , setCustomerId] = useState("")
 
+  function validateFormRequired() {
+    if(roomNo!=0&&check_in_date!=""&&check_out_date!=""&&noOf_people!=0){
+      return true
+    }
+    return false
+  }
+
   function addNewBooking(){
+    if(!validateFormRequired){
+      alert("Please fill the full form")
+      return
+    }
     hotelApi.post("/booking/add",{
       roomNo,
       customerId:"12345678a",
@@ -76,7 +81,7 @@ function AddBooking()
                                 <br/>
                                 <tr>
                                   <td><label className={RoomHomeStyles.labels}>No of People</label></td>
-                                  <td><input name='type'type='text' className={RoomHomeStyles.inputs}
+                                  <td><input name='type' type="number" className={RoomHomeStyles.inputs}
                                   value={noOf_people}
                                   onChange={(e)=>setNoOf_people(e.target.value)}/> </td>
                                 </tr>
