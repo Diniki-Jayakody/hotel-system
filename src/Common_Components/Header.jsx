@@ -1,13 +1,36 @@
 import React from "react";
+import './Header.css';
+import Navbar from "./NavBar";
 
-import HeaderStyles from './Header.module.css';
-import {Link} from 'react-router-dom';
 
 function Header()
 {
     return(
         <>
-        <div className={HeaderStyles.headerBox}>
+        <section className="header">
+      <section className="header-top">
+        <section className="header-top__logo">
+          <a href="/room_home" className="header-logo">
+          <img src={require('./logo.png')} alt='logo' />
+          </a>
+        </section>
+        <section className="header-top__navbar">
+          <section className="header-top__navigation">
+            {/* <Navbar /> */}
+          </section>
+          <hr className="header-top__seperator" />
+        </section>
+      </section>
+      <section className="header-bottom">
+        <section className="header-bottom__phone">
+        
+        </section>
+        <section className="header-bottom__email">
+        
+        </section>
+      </section>
+    </section>
+        {/* <div className={HeaderStyles.headerBox}>
             <table>
                 <tr>
                 
@@ -22,7 +45,7 @@ function Header()
               
                 </tr>
             </table>
-        </div>
+        </div> */}
         </>
     );
 }

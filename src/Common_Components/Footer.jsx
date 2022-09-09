@@ -1,42 +1,50 @@
 import React from "react";
-
-import FooterStyles from './Footer.module.css';
-
-import {TwitterOutlined , InstagramOutlined, LinkedinOutlined, WhatsAppOutlined } from '@ant-design/icons';
+import './Footer.css';
 
 function Footer()
 {
     return(
         <>
-            <div className={FooterStyles.footerBox}>
-                <center>
-                <table>
-                    <row>
-                        <td className={FooterStyles.footerContent}>
-                            <h3>LOGO</h3>
-                            <p className={FooterStyles.footerData}>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-                            </p>
-                        </td>
-                        <td className={FooterStyles.footerContent}>
-                            <h3>COMPANY</h3>
-                            <p className={FooterStyles.footerData}>About Us</p>
-                            <p className={FooterStyles.footerData}>Legal Information</p>
-                            <p className={FooterStyles.footerData}>Contact Us</p>
-                            <p className={FooterStyles.footerData}>Blogs</p>
-                        </td>
-                        <td className={FooterStyles.footerContent}>
-                            <h3>CONTACT INFO</h3>
-                            <p className={FooterStyles.footerData}>Phone: 0112222783</p>
-                            <p className={FooterStyles.footerData}>Email: anniston@gmail.com</p>
-                            <p className={FooterStyles.footerData}>Address: 100 Smart Street, Colombo, Sri Lanka.</p>
-                            <p><TwitterOutlined style={{paddingRight:'1vw'}}/><InstagramOutlined style={{paddingRight:'1vw'}}/><LinkedinOutlined style={{paddingRight:'1vw'}}/><WhatsAppOutlined style={{paddingRight:'1vw'}}/></p>
-                        </td>
-                    </row>
-                </table>
-                </center>
+           <section className="footer">
+      <hr className="footer-seperator" />
+      
+      <section className="footer-info">
+        <section className="footer-info-left">
+          <section className="footer-info__image">
+          <a href="/home" className="header-logo">
+          <img src={require('./logo.png')} alt='logo' />
+          </a>
+          </section>      
+        </section>
 
-            </div>
+        <section className="footer-info-center">
+
+          <section className="footer-info__email">
+            Company
+          </section>
+          <section className="footer-info__terms">
+            Login
+            <br />
+           Sign Up
+           <br/>
+           Contact Us
+          </section>
+        </section>
+        <section className="footer-info-right">
+          <section className="footer-info__number">
+           Contact Info
+          </section>
+          <section className="footer-info__contact">
+           Phone - 0112452678
+            <br />
+           Email - HotelAnniston@gmai.com
+           <br />
+           Location - 100 Smart Street,Colombo 5
+          </section>
+        </section>
+      </section>
+      <hr className="footer-seperator" />
+    </section>
         </>
     );
 }

@@ -13,10 +13,11 @@ function HomePage()
         <>
         <div className={HomePageStyles.screen}>
            <div><Header/></div> 
-           <div>
+           <div className={HomePageStyles.addbooking}>
                 <Link to='/add_booking'><button>Add booking</button></Link>  
            </div>
-           <div><Footer/></div> 
+           <div></div>
+           <div className={HomePageStyles.footer}><Footer/></div> 
         </div>
         </>
     );
